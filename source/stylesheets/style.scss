@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
+@import "compass/css3";
+
 @import "base/functions";
 @import "base/variables";
 @import "base/mixins";
-@import "base/vendor_mixins";
 
 @import "core/reset";
 @import "core/typography";
