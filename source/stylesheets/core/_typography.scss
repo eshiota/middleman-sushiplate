@@ -8,7 +8,7 @@
 
 /* 16px / 16px - 100% */
 body {
-  font: normal normal 100%/1.5em sans-serif;
+  font: normal normal 100%/1.5 sans-serif;
 }
 
 blockquote, q { quotes: none; }
@@ -80,11 +80,11 @@ blockquote {
 
 h1, h2, h3, h4 {
   font-family: "Museo Sans", "Gill Sans", sans-serif;
+  font-weight: 500;
 }
 
 h1 {
   font-size: em(56px, $CONTEXT_FONT_SIZE);
-  font-weight: 500;
   line-height: em(56px, 56px);
   margin-bottom: em(48px, 56px);
   text-align: center;
@@ -93,7 +93,6 @@ h1 {
 
 h2 {
   font-size: em(44px, $CONTEXT_FONT_SIZE);
-  font-weight: 500;
   line-height: em(44px, 44px);
   margin-bottom: em(32px, 44px);
   text-align: center;
@@ -103,7 +102,6 @@ h2 {
 h3 {
   border-bottom: 1px solid adjust-color($TEXT-COLOR, $lightness: +20%);
   font-size: em(32px, $CONTEXT_FONT_SIZE);
-  font-weight: 500;
   line-height: em(32px, 32px);
   margin-bottom: em(32px, 32px);
   padding-bottom: em(8px, 32px);
@@ -111,7 +109,6 @@ h3 {
 
 h4 {
   font-size: em(24px, $CONTEXT_FONT_SIZE);
-  font-weight: 500;
   line-height: em(24px, 24px);
   margin-bottom: em(24px, 24px);
 }
