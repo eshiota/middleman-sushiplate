@@ -59,5 +59,4 @@ configure :build do
   activate :minify_javascript
   activate :cache_buster
   activate :gzip
-  activate :smusher # Compress PNGs after build
 end
