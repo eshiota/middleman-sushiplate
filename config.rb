@@ -60,3 +60,15 @@ configure :build do
   activate :cache_buster
   activate :gzip
 end
+
+# Deployment configuration for middleman-sync
+# https://github.com/karlfreeman/middleman-sync
+activate :sync do |sync|
+  sync.fog_provider = "AWS"
+  # sync.fog_directory = "YOUR_FOG_DIRECTORY"
+  sync.fog_region = "us-east-1"
+  sync.aws_access_key_id = ENV["AWS_ACCESS_KEY_ID"]
+  sync.aws_secret_access_key = ENV["AWS_SECRET_ACCESS_KEY"]
+  sync.existing_remote_files = "delete"
+  sync.gzip_compression = true
+end
