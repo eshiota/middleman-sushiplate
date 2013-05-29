@@ -2,10 +2,6 @@
 # Compass
 ###
 
-# Susy grids in Compass
-# First: gem install susy
-# require 'susy'
-
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
@@ -72,3 +68,5 @@ activate :sync do |sync|
   sync.existing_remote_files = "delete"
   sync.gzip_compression = true
 end
+
+activate :directory_indexes
