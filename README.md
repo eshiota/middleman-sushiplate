@@ -19,7 +19,7 @@ UI elements, or add external ones as needed.
 2. Clone this repo: `git clone git://github.com/eshiota/middleman-sushiplate.git ~/.middleman/sushiplate`
 3. Create your middleman project with the sushiplate template: `middleman init my_project --template=sushiplate`
 
-## Deployment process
+## Deploying to Amazon S3
 
 Props to @lucasmazza on the deployment process config and README
 
@@ -32,22 +32,25 @@ export AWS_ACCESS_KEY_ID=<your access key>
 export AWS_SECRET_ACCESS_KEY=<your secret key>
 ```
 
-Uncomment and insert your fog directory on `config.rb`
+Uncomment and insert your S3 bucket/region on `config.rb`
 
 ```
-sync.fog_directory = "YOUR_FOG_DIRECTORY"
+sync.bucket = 'www.yourbucket.com'
+sync.region = 'sa-east-1'
 ```
 
 Then, build a fresh version of the website with `middleman build`
 (so you won't upload an outdated version of the website) and upload
-the build output with `middleman sync`.
+the build output with `middleman s3_sync`.
 
 ```
 # Build the static site into `./build`.
 middleman build
 # Upload everything in `./build` to S3.
-middleman sync
+middleman s3_sync
 ```
+
+View more sync options at the [middleman-s3_sync repo](https://github.com/fredjean/middleman-s3_sync).
 
 ## Included helpers
 
