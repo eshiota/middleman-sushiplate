@@ -18,6 +18,7 @@ UI elements, or add external ones as needed.
 1. Install middleman: `gem install middleman`
 2. Clone this repo: `git clone git://github.com/eshiota/middleman-sushiplate.git ~/.middleman/sushiplate`
 3. Create your middleman project with the sushiplate template: `middleman init my_project --template=sushiplate`
+4. Go to your project's directory and run bundle install: `cd my_project; bundle install`
 
 ## Deploying to Amazon S3
 
